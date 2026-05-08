@@ -2,11 +2,14 @@ package LAB_8;
 
 public class Main {
     public static void main(String[] args) {
-        // Перевірка наявності потрібної кількості параметрів командного рядка
+        String filename = "txt.txt";
+        int lowerbound = 1;
+        int upperbound = 9;
+
         if (args.length < 3) {
-            System.out.println("Помилка: Недостатньо аргументів командного рядка.");
-            System.out.println("Правильне використання: java Main <ім'я_файлу.txt> <початок_діапазону> <кінець_діапазону>");
-            System.out.println("Наприклад: java Main result.txt -10 50");
+            filename = "LAB_8/src" + args[0];
+            lowerbound = Integer.parseInt(args[1]);
+            upperbound = Integer.parseInt(args[2]);
             return;
         }
 
